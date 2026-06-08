@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+Devanagari:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-devanagari: "Noto Sans Devanagari", sans-serif;
+  
+  --color-canvas: #EDF3FC;
+  --color-surface: rgba(255, 255, 255, 0.75);
+  --color-sidebar-bg: #091B3D;
+  --color-sidebar-active: #132D5C;
+  --color-section-rail: rgba(225, 237, 252, 0.5);
+  --color-accent-primary: #041E42;
+  --color-accent-link: #0036B3;
+  --color-border-default: rgba(186, 206, 233, 0.6);
+  --color-border-strong: #8FB4DF;
+  --color-border-focus: #0036B3;
+  --color-text-primary: #030C22;
+  --color-text-secondary: #2C3E5A;
+  --color-text-muted: #3D4E6D;
+  --color-text-inverse: #F4F8FF;
+  --color-text-inverse-secondary: #BCD2EE;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.02);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+/* Custom Accessibility, Custom Scroll, and Glassmorphism Utility Classes */
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+  }
+}
+
+/* Glassmorphism Layout Panels */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(16px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+}
+
+.glass-panel-heavy {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(24px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(130%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark-glass-panel {
+  background-color: rgba(9, 27, 61, 0.8) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.shadow-glass {
+  box-shadow: 0 8px 32px 0 rgba(0, 54, 179, 0.04), 
+              0 1px 2px 0 rgba(0, 0, 0, 0.01) !important;
+}
+
+.shadow-glass-strong {
+  box-shadow: 0 12px 40px 0 rgba(0, 54, 179, 0.07),
+              0 2px 4px 0 rgba(0, 0, 0, 0.01) !important;
+}
+
+/* Hidden scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base style resets and utility configurations */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Elegant outline for focus states */
+*:focus-visible {
+  outline: 2.5px solid var(--color-accent-link);
+  outline-offset: 2.5px;
+}

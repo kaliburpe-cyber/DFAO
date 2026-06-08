@@ -1,0 +1,6 @@
+{
+  "name": "DFAO CMS Dashboard",
+  "description": "A high-precision, bilingual (English and Nepali) content management system designed for Kathmandu's Disabled-Friendly Advocacy Organization (DFAO). Features accessible design, Apple-grade interactions, and bilingual editorial flows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
